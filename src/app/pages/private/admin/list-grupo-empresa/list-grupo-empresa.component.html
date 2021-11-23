@@ -1,0 +1,24 @@
+<div class="content">
+  <div class="header">
+    <h1>Lista de Grupos</h1>
+    <a class="btn-link" [routerLink]="['/admin/grupo-empresa']">+ Cadastro Novo Grupo</a>
+  </div>
+  <form action="">
+    <div class="icon">
+      <img src="./assets/search.png" alt="">
+    </div>
+    <input type="text">
+  </form>
+  <table>
+    <tr>
+      <th>Nome do Grupo</th>
+      <th>Administrador</th>
+      <th>E-mail Administrador</th>
+    </tr>
+    <tr *ngFor="let grupo of grupos" >
+      <td>{{grupo.grupo}}</td>
+      <td>{{grupo.administrador?.usuario}}</td>
+      <td>{{grupo.administrador?.email}}</td>
+    </tr>
+  </table>
+</div>

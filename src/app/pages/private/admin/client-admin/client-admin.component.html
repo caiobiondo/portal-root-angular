@@ -1,0 +1,35 @@
+<div class="content">
+  <form (ngSubmit)="submit()" [formGroup]="adminForm" novalidate>
+    <h1 class="header-form">>> Novo Administrador</h1>
+    <div class="form-group">
+      <label for="">Nome</label>
+      <input type="text" formControlName="nome" />
+    </div>
+    <div class="form-group">
+      <label for="">Email</label>
+      <input type="text" formControlName="email" />
+    </div>
+    <div class="form-group">
+      <label for="">Grupo</label>
+      <select name="" id="" formControlName="empresa">
+        <option value="">Selecione uma empresa</option>
+        <option *ngFor="let grupo of grupos" value="{{ grupo.id }}">
+          {{ grupo.grupo }}
+        </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="">Perfil</label>
+      <input type="text" formControlName="usuario" />
+    </div>
+    <div class="form-group">
+      <label for="">Nova Senha</label>
+      <input type="password" formControlName="password1" />
+    </div>
+    <div class="form-group">
+      <label for="">Confirmar Senha</label>
+      <input type="password" formControlName="password2" />
+    </div>
+    <button>Salvar</button>
+  </form>
+</div>

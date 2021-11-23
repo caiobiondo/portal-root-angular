@@ -1,0 +1,23 @@
+<div class="content">
+  <form (ngSubmit)="submit()" [formGroup]="grupoForm" novalidate>
+    <h1 class="header-form">>> Grupo de Empresas</h1>
+    <div class="form-group">
+      <label for="">Grupo Empresas</label>
+      <input type="text" formControlName="grupo" />
+    </div>
+    <div class="form-group">
+      <label for="">Empresas</label>
+      <p-multiSelect
+        [style]="{ width: '100%' }"
+        [options]="empresas"
+        formControlName="empresas"
+        defaultLabel="Selecione uma empresa"
+        optionLabel="razaosocial"
+        optionValue="id"
+        display="chip"
+      >
+      </p-multiSelect>
+    </div>
+    <button>Salvar</button>
+  </form>
+</div>

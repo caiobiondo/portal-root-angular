@@ -1,0 +1,19 @@
+<div class="login">
+  <div class="content-login">
+    <img src="./assets/logo.png" alt="" />
+    <form (ngSubmit)="signIn()" [formGroup]="loginForm" novalidate>
+      <div class="form-group">
+        <label for="">Nome do usuário</label>
+        <input type="text" formControlName="username"/>
+      </div>
+
+      <div class="form-group">
+        <label for="">Senha</label>
+        <input type="password" formControlName="password"/>
+      </div>
+      <a routerLink="/forgot-password">Esqueceu sua senha?</a>
+      <button type="submit">Enviar</button>
+    </form>
+    <span>Novo usuário? <a routerLink="/sign-up">Cadastre-se</a></span>
+  </div>
+</div>

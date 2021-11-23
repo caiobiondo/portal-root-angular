@@ -1,0 +1,84 @@
+:host .container {
+  background-image: none !important;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header h1 {
+  position: relative;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+  color: #fcb62b;
+}
+
+.header h1::before {
+  content: '>>';
+  width: 15px;
+  left: -30px;
+  position: absolute;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 35px;
+}
+
+form .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 30px;
+  background: #FCB62B;
+}
+
+form input{
+  display: flex;
+  width: 426px;
+  height: 32px;
+  padding: 0 15px;
+
+  background: #FFFFFF;
+  border: 1px solid rgba(252, 182, 43, 0.45);
+  box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 50px;
+}
+
+th {
+  background-color: #7E6642;
+  color: #fff;
+  padding: 8px;
+}
+
+td {
+  border: 1px solid #E5E5E5;
+  padding: 7px;
+  color: #000;
+}
+
+tr{
+  background: #fff;
+}
+
+tr:nth-child(even) {
+  background: rgb(229, 229, 229);
+  border: 1px solid #E5E5E5;
+}
